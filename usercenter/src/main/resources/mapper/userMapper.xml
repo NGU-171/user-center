@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linbei.usercenter.mapper.userMapper">
+
+    <resultMap id="BaseResultMap" type="com.linbei.usercenter.model.domain.user">
+            <id property="userId" column="userId" jdbcType="INTEGER"/>
+            <result property="userName" column="userName" jdbcType="VARCHAR"/>
+            <result property="userAccount" column="userAccount" jdbcType="VARCHAR"/>
+            <result property="userImage" column="userImage" jdbcType="VARCHAR"/>
+            <result property="userGender" column="userGender" jdbcType="TINYINT"/>
+            <result property="userPhone" column="userPhone" jdbcType="VARCHAR"/>
+            <result property="userPassword" column="userPassword" jdbcType="VARCHAR"/>
+            <result property="userMail" column="userMail" jdbcType="VARCHAR"/>
+            <result property="isVaild" column="isVaild" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="userIdentity" column="userIdentity" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        userId,userName,userAccount,
+        userImage,userGender,userPhone,
+        userPassword,userMail,isVaild,
+        createTime,updateTime,isDelete,
+        userIdentity
+    </sql>
+</mapper>
